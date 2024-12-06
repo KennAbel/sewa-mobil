@@ -22,4 +22,9 @@ Route::get('/singup', function () {
     return view('singup');
 });
 
+Route::get('/kendaraan', function () {
+    return view('kendaraan');
+});
+
+
 Route::resource('cars', CarController::class); // /create /edit /store /update /destroy /index /show
