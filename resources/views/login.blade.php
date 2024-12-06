@@ -1,60 +1,56 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
 </head>
-<body class="bg-gray-100 flex items-center justify-center h-screen">
-    <div class="bg-white shadow-md rounded-lg p-8 max-w-md w-full">
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white shadow-lg rounded-lg p-6 w-full max-w-sm">
         <h2 class="text-2xl font-bold text-center mb-6">Login</h2>
         <form action="#" method="POST">
+            <!-- Email Input -->
             <div class="mb-4">
-                <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
                 <input
                     type="email"
                     id="email"
                     name="email"
-                    class="w-full px-4 py-2 border rounded-md text-gray-700 focus:outline-none focus:ring focus:ring-blue-200"
+                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                     placeholder="Email"
                     required
                 />
             </div>
+            <!-- Password Input -->
             <div class="mb-4">
-                <label for="password" class="block text-gray-700 font-medium mb-2">Password</label>
+                <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
                 <input
                     type="password"
                     id="password"
                     name="password"
-                    class="w-full px-4 py-2 border rounded-md text-gray-700 focus:outline-none focus:ring focus:ring-blue-200"
+                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                     placeholder="Password"
                     required
                 />
             </div>
+            <!-- Role Dropdown -->
             <div class="mb-4">
-                <label for="role" class="block text-gray-700 font-medium mb-2">Role</label>
-                <select
-                    id="role"
-                    name="role"
-                    class="w-full px-4 py-2 border rounded-md text-gray-700 focus:outline-none focus:ring focus:ring-blue-200"
-                >
+                <label for="role" class="block text-sm font-medium text-gray-700">Role</label>
+                <select id="role" name="role" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                     <option value="customer">Customer</option>
                     <option value="admin">Admin</option>
                 </select>
             </div>
-            <div class="flex items-center justify-between mb-6">
-                <button
-                    type="submit"
-                    class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition"
-                >
-                    Login
-                </button>
-                <a href="#" class="text-blue-500 hover:underline text-sm">Forgot Password?</a>
+            <!-- Submit Button & Forgot Password -->
+            <div class="flex justify-between items-center mb-4">
+                <button type="submit" class="bg-indigo-600 text-white px-4 py-2 rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Login</button>
+                <a href="#" class="text-sm text-indigo-600 hover:underline">Forgot Password?</a>
             </div>
         </form>
-        <p class="text-center text-gray-600 text-sm">
-            Don't have an account? <a href="/singup" class="text-blue-500 hover:underline">Sign Up</a>
+        <!-- Sign Up Link -->
+        <p class="text-center text-sm text-gray-600">
+            Don't have an account? <a href="/signup" class="text-indigo-600 hover:underline">Sign Up</a>
         </p>
     </div>
 </body>
