@@ -60,7 +60,7 @@
         </form>
         <!-- Login Link -->
         <p class="text-center text-muted mt-3">
-            Already have an account? <a href="/login" class="text-primary text-decoration-none">Login</a>
+            Already have an account? <a href="/" class="text-primary text-decoration-none">Login</a>
         </p>
     </div>
 

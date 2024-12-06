@@ -10,7 +10,9 @@
 <body class="bg-light d-flex align-items-center justify-content-center vh-100">
     <div class="bg-white shadow rounded p-4 p-md-5 w-100" style="max-width: 400px;">
         <h2 class="text-center mb-4">Login</h2>
-        <form action="#" method="POST">
+        <!-- Form Login -->
+        <form action="/login" method="POST">
+            @csrf <!-- Token CSRF Laravel -->
             <!-- Email Input -->
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
@@ -51,7 +53,8 @@
         </form>
         <!-- Sign Up Link -->
         <p class="text-center text-muted">
-            Don't have an account? <a href="/signup" class="text-primary text-decoration-none">Sign Up</a>
+            Don't have an account? 
+            <a href="/singup" class="text-primary text-decoration-none">Sign Up</a>
         </p>
     </div>
 

@@ -14,7 +14,7 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link text-white" href="#">Kendaraan</a></li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#">
+                        <a class="nav-link text-white" href="/user-profile">
                             <img src="https://storage.googleapis.com/a1aa/image/0djThjDMRBaLMJDm6w74eVnqUvGAcfXkSFrj2ZmrYJ3NaF4TA.jpg" alt="Profile circle with a generic user icon" class="rounded-circle" width="40" height="40">
                         </a>
                     </li>

@@ -14,9 +14,29 @@ use App\Http\Controllers\CarController;
 |
 */
 
-Route::get('/login', function () {
+use Illuminate\Http\Request;
+
+Route::get('/', function () {
     return view('login');
 });
+
+Route::post('/login', function (\Illuminate\Http\Request $request) {
+    // Tangkap data dari form
+    $email = $request->input('email');
+    $password = $request->input('password');
+    $role = $request->input('role');
+
+    // Logika untuk mengarahkan berdasarkan role
+    if ($role === 'customer') {
+        return redirect('/kendaraan'); // Arahkan ke halaman kendaraan
+    } elseif ($role === 'admin') {
+        return redirect('/admin-profile'); // Arahkan ke halaman admin
+    } else {
+        return back()->withErrors(['error' => 'Role tidak valid!']);
+    }
+});
+
+
 
 Route::get('/singup', function () {
     return view('singup');
