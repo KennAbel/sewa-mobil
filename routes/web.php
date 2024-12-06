@@ -15,7 +15,11 @@ use App\Http\Controllers\CarController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('login');
+});
+
+Route::get('/singup', function () {
+    return view('singup');
 });
 
 Route::resource('cars', CarController::class); // /create /edit /store /update /destroy /index /show
