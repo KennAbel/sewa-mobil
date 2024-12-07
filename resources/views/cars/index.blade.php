@@ -1,4 +1,9 @@
-
+<x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('Dashboard') }}
+        </h2>
+    </x-slot>
 <style>
     table {
         border: 1px solid black;
@@ -15,10 +20,10 @@
     }
 </style>
    <h1>Cars List</h1>
-    <a href="{{ route('cars.create') }}">Add Car</a>
-    @if (session('success'))
-        <div>{{ session('success') }}</div>
-    @endif
+   <a href="{{ route('cars.create') }}" class="btn btn-primary">Add Car</a>
+   @if (session('success'))
+       <div class="alert alert-success">{{ session('success') }}</div>
+   @endif
     <table>
         <thead>
             <tr >
@@ -50,3 +55,4 @@
             @endforeach
         </tbody>
     </table>
+</x-app-layout>

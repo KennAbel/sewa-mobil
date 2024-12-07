@@ -11,12 +11,13 @@ return new class extends Migration
      */
     public function up()
 {
-    Schema::create('user_data', function (Blueprint $table) {
-        $table->increments('User_ID'); // Primary key
-        $table->string('User_Name', 255);
-        $table->string('User_Email', 255);
-        $table->string('User_Role', 20)->unique(); // Unique key
-        $table->string('User_Password', 255);
+    Schema::create('users', function (Blueprint $table) {
+        $table->id();
+        $table->string('name');
+        $table->string('email');
+        $table->string('role');
+        $table->string('password');
+        $table->timestamps();
     });
 }
 
