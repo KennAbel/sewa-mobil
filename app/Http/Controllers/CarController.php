@@ -9,12 +9,25 @@ class CarController extends Controller
 {
     public function index()
     {
+        if(auth()->user()->role != 'admin'){
+            return redirect()->back()->with('message', 'you are not allowed');
+        }
         $cars = Car::all();
         return view('cars.index', compact('cars'));
     }
 
+    public function dashboard()
+    {
+        
+        $cars = Car::all();
+        return view('dashboard', compact('cars'));
+    }
+
     public function create()
     {
+        if(auth()->user()->role != 'admin'){
+            return redirect()->back()->with('message', 'you are not allowed');
+        }
         return view('cars.create');
     }
 
@@ -40,6 +53,9 @@ class CarController extends Controller
 
     public function edit($id)
     {
+        if(auth()->user()->role != 'admin'){
+            return redirect()->back()->with('message', 'you are not allowed');
+        }
         $car = Car::findOrFail($id);
         return view('cars.edit', compact('car'));
     }
