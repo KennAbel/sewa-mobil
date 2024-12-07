@@ -54,5 +54,21 @@ Route::get('/admin-profile', function () {
     return view('admin-profile');
 });
 
+Route::post('/login', [LoginController::class, 'authenticate']);
+
+Route::get('/admin/dashboard', function () {
+    return view('admin.dashboard'); // Path ke dashboard admin
+})->middleware('auth'); // Pastikan hanya user yang login bisa mengakses
+
+Route::get('/customer/home', function () {
+    return view('customer.home'); // Path ke dashboard customer
+})->middleware('auth');
+
+
+use App\Http\Controllers\AutomobileController;
+
+Route::get('/automobiles', [AutomobileController::class, 'index']);
+
+
 
 Route::resource('cars', CarController::class); // /create /edit /store /update /destroy /index /show

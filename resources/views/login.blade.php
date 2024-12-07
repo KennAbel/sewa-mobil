@@ -12,45 +12,46 @@
         <h2 class="text-center mb-4">Login</h2>
         <!-- Form Login -->
         <form action="/login" method="POST">
-            @csrf <!-- Token CSRF Laravel -->
-            <!-- Email Input -->
-            <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    class="form-control"
-                    placeholder="Email"
-                    required
-                />
-            </div>
-            <!-- Password Input -->
-            <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
-                <input
-                    type="password"
-                    id="password"
-                    name="password"
-                    class="form-control"
-                    placeholder="Password"
-                    required
-                />
-            </div>
-            <!-- Role Dropdown -->
-            <div class="mb-3">
-                <label for="role" class="form-label">Role</label>
-                <select id="role" name="role" class="form-select">
-                    <option value="customer">Customer</option>
-                    <option value="admin">Admin</option>
-                </select>
-            </div>
-            <!-- Submit Button & Forgot Password -->
-            <div class="d-flex justify-content-between align-items-center mb-3">
-                <button type="submit" class="btn btn-primary">Login</button>
-                <a href="#" class="text-decoration-none">Forgot Password?</a>
-            </div>
-        </form>
+    @csrf
+    <!-- Email Input -->
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input
+            type="email"
+            id="email"
+            name="email"
+            class="form-control"
+            placeholder="Email"
+            required
+        />
+    </div>
+    <!-- Password Input -->
+    <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input
+            type="password"
+            id="password"
+            name="password"
+            class="form-control"
+            placeholder="Passwcord"
+            required
+        />
+    </div>
+    <!-- Role Dropdown -->
+    <div class="mb-3">
+        <label for="role" class="form-label">Role</label>
+        <select id="role" name="role" class="form-select">
+            <option value="customer">Customer</option>
+            <option value="admin">Admin</option>
+        </select>
+    </div>
+    <!-- Submit Button -->
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <button type="submit" class="btn btn-primary">Login</button>
+        <a href="#" class="text-decoration-none">Forgot Password?</a>
+    </div>
+</form>
+
         <!-- Sign Up Link -->
         <p class="text-center text-muted">
             Don't have an account? 
